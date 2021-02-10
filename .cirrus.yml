@@ -9,7 +9,10 @@ task:
     PYTHON_CMD: python3.8
     CONFIG: "${COMMON_CONFIG} --python=/usr/local/bin/${PYTHON_CMD}"
   matrix:
-    - name: 13.0-CURRENT
+    - name: 14.0-CURRENT
+      freebsd_instance:
+        image_family: freebsd-14-0-snap
+    - name: 13.0-STABLE
       freebsd_instance:
         image_family: freebsd-13-0-snap
     - name: 12.2-STABLE
